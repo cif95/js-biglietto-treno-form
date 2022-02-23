@@ -1,0 +1,9 @@
+body{
+	background-color: aliceblue;
+}
+
+main section#ticket div#ticket-details ul li{
+	margin-right:2.2rem;
+}
+
+
