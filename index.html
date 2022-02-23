@@ -16,51 +16,55 @@
 </head>
 <body>
 	<main>
-		<section id="user-form">
+		<section id="ticket-calc">
 			<div class="container-fluid p-5">
 				<div class="row text-center text-uppercase">
-					<div class="col">
+					<div class="col text-white">
 						<h2>Calcola il prezzo del tuo biglietto</h2>
 					</div>
 				</div>
-				<div class="row justify-content-center align-items-center border border-3 bg-light">
+				<div class="row justify-content-center align-items-center rounded-3 bg-gradient bg-info bg-opacity-25">
 					<div class="col-12 col-md-8 p-5">
-						<label for="user-name-input" class="form-label">Nome Cognome</label>
-						<div class="input-group mb-3">		
-							<input id="user-name-input" type="text" class="form-control" aria-label="user name and surname">
-						</div>
-						<label for="travel-distance-input" class="form-label">Km da percorrere</label>
-						<div class="input-group mb-3">
-							<input id="travel-distance-input" type="text" class="form-control" aria-label="user travel distance">
-						</div>
-						<label for="user-age-range" class="form-label">Fascia d'età</label>
-						<select name="user-age-range" id="user-age-range" class="me-5">
-							<option value="Minorenne">Minorenne</option>
-							<option value="Maggiorenne">Maggiorenne</option>
-							<option value="Over 65">Over 65</option>
-						</select>
-						<button id="btn-create" type="button" class="btn btn-primary ms-5">Genera</button>
-						<button id="btn-undo" type="button" class="btn btn-secondary ms-2">Annulla</button>
+						<form id="user-form">
+							<label for="user-name-input" class="form-label fw-bold">Nome Cognome</label>
+							<div class="input-group mb-3 w-25">		
+								<input id="user-name-input" type="text" class="form-control" aria-label="user name and surname">
+							</div>
+							<label for="travel-distance-input" class="form-label fw-bold">Km da percorrere</label>
+							<div class="input-group mb-3 w-25">
+								<input id="travel-distance-input" type="text" class="form-control" aria-label="user travel distance">
+							</div>
+							<label for="user-age-range" class="form-label fw-bold py-2">Fascia d'età : </label>
+							<select name="user-age-range" id="user-age-range" class="rounded-3">
+								<option value="Minorenne">Minorenne</option>
+								<option value="Maggiorenne">Maggiorenne</option>
+								<option value="Over 65">Over 65</option>
+							</select>
+							<div id="btn-group" class="py-3">
+								<button id="btn-create" type="button" class="btn btn-primary">Genera</button>
+								<button id="btn-undo" type="button" class="btn btn-secondary ms-2">Annulla</button>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section id="ticket">
+		<section id="ticket" class="d-none">
 			<div class="container-fluid p-5">
 				<div class="row text-center text-uppercase">
-					<div class="col">
+					<div class="col text-white">
 						<h2>Il tuo biglietto</h2>
 					</div>
 				</div>
-				<div class="row justify-content-center border border-3 bg-light">
+				<div class="row justify-content-center rounded-3 bg-gradient bg-info bg-opacity-25">
 					<div class="col-12 col-md-8 p-5">
-						<h5>Dettagio passeggeri</h5>
-						<div id="ticket-box" class="border-3 border d-flex">
-							<div class="name w-25 bg-secondary p-2 text-white">
+						<h5 class="fw-bold">Dettaglio passeggeri</h5>
+						<div id="ticket-box" class="border-1 rounded-3 border d-flex">
+							<div class="name w-25 bg-secondary bg-opacity-25 p-2 text-white">
 								<h6 class="fw-bold">Nome passeggero</h6>
 								<p></p>
 							</div>
-							<div class="d-flex justify-content-evenly w-100" id="ticket-details">
+							<div class="d-flex justify-content-evenly" id="ticket-details">
 								<div class="ticket-item p-2">
 									<p class="fw-bold">Offerta</p>
 									<p>Biglietto Standard</p>

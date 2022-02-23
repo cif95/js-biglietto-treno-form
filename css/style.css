@@ -1,5 +1,6 @@
 body{
-	background-color: aliceblue;
+	font-family: 'Raleway';
+	background-color:rgb(45, 122, 211);
 }
 
 main section#ticket div#ticket-details ul li{
